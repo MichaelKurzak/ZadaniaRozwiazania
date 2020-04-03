@@ -1,10 +1,19 @@
 package a_Zadania.a_Dzien_1.d_Konstruktory;
 
 public class Calculator {
-    private double result;
-    public String score;
-    public String free;
-    String[] historyOfOperation;
+    public static String score;
+    double result;
+    String free;
+    private String[] historyOfOperation;
+
+
+    public Calculator() {
+        historyOfOperation = new String[10];
+        for (int i = 0; i < historyOfOperation.length; i++)
+            historyOfOperation[i] = score;
+
+    }
+
 
     public String add(double num1, double num2) {
         result = num1 + num2;
@@ -34,20 +43,11 @@ public class Calculator {
         System.out.println(score);
     }
 
-    public Calculator() {
-        historyOfOperation = new String[10];
-        for (int i = 0; i < historyOfOperation.length; i++) {
-            historyOfOperation[i] = score;
-        }
-    }
-
 
     public void printOperations() {
 
         for (int i = 0; i < 10; i++)
-            System.out.println(historyOfOperation[i]);
-
-
+            System.out.println(i + " " + historyOfOperation[i]);
     }
 
     public void clearOperations() {
