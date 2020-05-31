@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Calculator {
 
-    List<String> historyOfOperation;
+    public List<String> historyOfOperation;
     int operation = 0;
-    double result;
+    public double result;
 
     public Calculator() {
         historyOfOperation = new ArrayList<>(10);
@@ -37,11 +37,13 @@ public class Calculator {
             result = num1 / num2;
         } else {
             result = Integer.parseInt("Nie można dzielić przez '0'");
-            historyOfOperation.add("Divided " + num1 + " by " + num2 + " got " + result);
         }
+
+        historyOfOperation.add("Divided " + num1 + " by " + num2 + " got " + result);
     }
 
     public void printOperations() {
+
         System.out.println(historyOfOperation.size() + " " + historyOfOperation);
     }
 
