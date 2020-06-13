@@ -9,11 +9,13 @@ public class Calculator {
     int operation = 0;
     public double result;
 
+    // this is a constructor
     public Calculator() {
-        historyOfOperation = new ArrayList<>(10);
+        historyOfOperation = new ArrayList<>(0);
 
     }
 
+    // these are the methods
     public void add(double num1, double num2) {
         result = num1 + num2;
         historyOfOperation.add("Added " + num1 + " to " + num2 + " got " + result);
