@@ -4,8 +4,8 @@ package a_Zadania.a_Dzien_1.g_Dziedziczenie;
 public class Employee {
     private int id;
     private String firstName;
-    private String lastName;
-    private double wage;
+    protected String lastName;
+    double wage;
 
     public Employee(int id, String firstName, String lastName, double wage) {
         this.id = id;
